@@ -1,0 +1,19 @@
+<?php
+class murid{
+    var $nama;
+    var $kelas;
+    
+    
+    function yandi_nama(){
+        return "Nama saya Yandi Aryana <br/>";
+    }
+    
+    function yandi_kelas(){
+        return "Saya dari kelas RPL XI-4 <br/>";
+    }
+    
+}
+$murid = new murid();
+ 
+echo $murid->yandi_nama();
+echo $murid->yandi_kelas();
