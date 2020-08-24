@@ -1,0 +1,16 @@
+<?php
+class laptop {
+   var $pemilik;
+   var $merk;
+   var $ukuran_layar;
+}
+?>
+
+<?php
+class laptop {
+   }
+ 
+$laptop_udin = new laptop();
+$laptop_bayu = new laptop();
+$laptop_sueb = new laptop();
+?>
