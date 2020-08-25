@@ -1,0 +1,17 @@
+<?php
+class motor{
+	public $warna;
+	public $merk;
+
+	public function nama_warna(){
+		return "Motor ini berwarna hitam <br/>";
+	}
+	public function nama_merk(){
+		return "Motor ini bermerk honda";
+	}
+}
+$motor = new motor();
+echo $motor->nama_warna();
+echo $motor->nama_merk();
+
+?>
