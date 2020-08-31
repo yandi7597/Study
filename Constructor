@@ -1,0 +1,33 @@
+<?php
+class produk{
+public $namaBarang,
+	   $merk, 
+	   $warna;
+
+public function getCetak(){
+	return "$this->namaBarang, $this->merk, $this->warna";
+}
+public function __construct($namaBarang="nama Barang",$merk="merk",$warna="warna"){
+	$this->namaBarang = $namaBarang;
+	$this->merk=$merk;
+	$this->warna=$warna;
+ 		}
+}
+$produk1 = new produk ("ZX25r","Kawasaki","Blue");
+$produk2 = new produk ("H2R","Kawasaki","Black");
+$produk3 = new produk ("Panigale V4R","Ducati","Red");
+$produk4 = new produk ("BMW S1000RR","BMW","Grey");
+$produk5 = new produk ("Triumph Scrambler","Triumph","White");
+
+
+echo "Nama Motor : " . $produk1->getCetak();
+echo "<br>";
+echo "Nama Motor : " .$produk2->getCetak();
+echo "<br>";
+echo "Nama Motor : " .$produk3->getCetak();
+echo "<br>";
+echo "Nama Motor : " .$produk4->getCetak();
+echo "<br>";
+echo "Nama Motor : " .$produk5->getCetak();
+echo "<br>";
+?>
