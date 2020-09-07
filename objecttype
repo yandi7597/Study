@@ -1,0 +1,39 @@
+<?php
+class barang{
+public $namaBarang,
+	   $merk, 
+	   $harga;
+
+public function getCetak(){
+	return "$this->namaBarang, $this->merk,( Rp $this->harga)";
+} 
+public function __construct($namaBarang="nama Barang",$merk="merk",$harga=0){
+	$this->namaBarang = $namaBarang;
+	$this->merk=$merk;
+	$this->harga=$harga;
+ 		}
+}
+
+	class cetakInfobarang{
+		public function cetakInfo($barang){
+			$str="{$barang->namaBarang} , {$barang->getCetak()}";
+			return$str;
+		}
+	}
+$barang1 = new barang("Helm", "Arai", 12000000);
+$barang2 = new barang("Helm", "Shoei", 15000000);
+$barang3 = new barang("Helm", "HJP", 5000000);
+$barang4 = new barang("Helm", "AGV", 16000000);
+$cetakInfobarang = new cetakInfobarang();
+
+echo "<br>";
+echo "Nama Barang : " . $barang1->getCetak();
+echo "<br>";
+echo "Nama Barang : " .$barang2->getCetak();
+echo "<br>";
+echo "Nama Barang : " .$barang3->getCetak();
+echo "<br>";
+echo "Nama Barang : " .$barang4->getCetak();
+echo "<br>";
+echo $cetakInfobarang->cetakInfo($barang1);
+?>
