@@ -1,0 +1,46 @@
+<?php
+class barang{
+public $namaBarang,
+	   $merk, 
+	   $harga,
+	   $ukuran,
+	   $warna;
+
+public function getCetak(){
+	return "$this->namaBarang, $this->merk,( Rp $this->harga)";
+} 
+public function __construct($namaBarang="nama Barang",$merk="merk",$harga=0,$ukuran="ukuran",$warna="warna"){
+	$this->namaBarang = $namaBarang;
+	$this->merk=$merk;
+	$this->harga=$harga;
+	$this->ukuran=$ukuran;
+	$this->warna=$warna;
+
+}
+public function cetakInfo(){
+	$str="{$this->namaBarang} , {$this->getCetak()}";
+	return$str;
+	}
+}
+
+class helm extends barang{
+	public function cetakInfo(){
+		$str="Helm: {$this->namaBarang} , {$this->getCetak()} | ukuran : {$this->ukuran}";
+		return$str;	
+	}
+}
+class sarungtangan extends barang{
+	public function cetakInfo(){
+		$str="Aksesoris: {$this->namaBarang} , {$this->getCetak()} | warna : {$this->warna}";
+		return$str;	
+
+} 	
+
+$barang1 = new helm("Helm", "Arai", 12000000, "XL", "-");
+$barang2 = new sarungtangan("Sarung tangan", "Riders and rules", 500000, "-", "Hitam");
+
+echo $barang1->cetakInfo();
+echo "<br>";
+echo $barang2->cetakInfo();
+echo "<br>";
+?>
